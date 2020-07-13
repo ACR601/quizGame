@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,323 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="quizGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trivia!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3i1-Up-RUr">
+                                <rect key="frame" x="36" y="102" width="342" height="33.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="28"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where are butterfly's tastebuds located?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq4-PG-2Sr">
+                                <rect key="frame" x="34" y="245.33333333333337" width="360" height="25"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQR-xp-Tvx">
+                                <rect key="frame" x="213" y="651" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-5y-Ily">
+                                <rect key="frame" x="186" y="815" width="42" height="36"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="koB-3S-RgN" kind="show" id="Eim-zk-AIE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msF-0x-Vyy">
+                                <rect key="frame" x="7" y="351" width="414" height="37"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <state key="normal" title="A. Their long tongue">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="td4-4u-2RN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqP-Zt-LfY">
+                                <rect key="frame" x="0.0" y="540" width="414" height="37"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <state key="normal" title="C. Their feet">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uzm-af-KrD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNL-5V-Bq4">
+                                <rect key="frame" x="0.0" y="445" width="414" height="37"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <state key="normal" title="B. Their wings">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9f-qP-A5t"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3M-H9-swl">
+                                <rect key="frame" x="7" y="700" width="407" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="16"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HNL-5V-Bq4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Dt-gE-KHQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BVE-5y-Ily" secondAttribute="bottom" constant="11" id="4Oj-Gx-Mzh"/>
+                            <constraint firstItem="msF-0x-Vyy" firstAttribute="top" secondItem="lq4-PG-2Sr" secondAttribute="bottom" constant="87.666666666666629" id="5kC-ej-dfr"/>
+                            <constraint firstItem="3i1-Up-RUr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="8TM-hd-IlL"/>
+                            <constraint firstItem="BQR-xp-Tvx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="213" id="A3n-Kp-D2s"/>
+                            <constraint firstItem="h3M-H9-swl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ATQ-0n-CcX"/>
+                            <constraint firstItem="msF-0x-Vyy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JYF-Su-qJk"/>
+                            <constraint firstItem="BVE-5y-Ily" firstAttribute="top" secondItem="h3M-H9-swl" secondAttribute="bottom" constant="94" id="LYo-yw-vkh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3i1-Up-RUr" secondAttribute="trailing" constant="36" id="MIg-bE-Zio"/>
+                            <constraint firstItem="XqP-Zt-LfY" firstAttribute="top" secondItem="HNL-5V-Bq4" secondAttribute="bottom" constant="58" id="NFe-aw-Eks"/>
+                            <constraint firstItem="HNL-5V-Bq4" firstAttribute="top" secondItem="msF-0x-Vyy" secondAttribute="bottom" constant="50" id="Rdl-lt-hih"/>
+                            <constraint firstItem="HNL-5V-Bq4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VcJ-Jh-K9w"/>
+                            <constraint firstItem="XqP-Zt-LfY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YFb-eT-JTt"/>
+                            <constraint firstItem="h3M-H9-swl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="ZDR-jo-yvv"/>
+                            <constraint firstItem="msF-0x-Vyy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aKc-pH-XAG"/>
+                            <constraint firstItem="XqP-Zt-LfY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bhb-a8-uJr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BVE-5y-Ily" secondAttribute="trailing" constant="186" id="dub-Jy-Km1"/>
+                            <constraint firstItem="BVE-5y-Ily" firstAttribute="top" secondItem="XqP-Zt-LfY" secondAttribute="bottom" constant="238" id="eX2-hh-INa"/>
+                            <constraint firstItem="BQR-xp-Tvx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="717" id="f87-v1-8zy"/>
+                            <constraint firstItem="BVE-5y-Ily" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="186" id="i1n-Rk-zzE"/>
+                            <constraint firstAttribute="bottom" secondItem="BQR-xp-Tvx" secondAttribute="bottom" constant="179" id="kHk-tn-Qsf"/>
+                            <constraint firstItem="h3M-H9-swl" firstAttribute="top" secondItem="XqP-Zt-LfY" secondAttribute="bottom" constant="123" id="mDc-ck-ArQ"/>
+                            <constraint firstItem="lq4-PG-2Sr" firstAttribute="top" secondItem="3i1-Up-RUr" secondAttribute="bottom" constant="110" id="mPR-wc-IO4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lq4-PG-2Sr" secondAttribute="trailing" constant="20" id="mag-PV-n5T"/>
+                            <constraint firstAttribute="trailing" secondItem="BQR-xp-Tvx" secondAttribute="trailing" constant="201" id="nHI-fQ-3J7"/>
+                            <constraint firstItem="3i1-Up-RUr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="oqO-Rn-DAR"/>
+                            <constraint firstItem="lq4-PG-2Sr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="zS7-fJ-SSe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelForWords" destination="h3M-H9-swl" id="TUi-f2-xXN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="1Db-l7-wV7">
+            <objects>
+                <viewController id="koB-3S-RgN" customClass="secondViewController" customModule="quizGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pxB-sJ-Js8" customClass="SecondViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trivia!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pih-dF-Iqk">
+                                <rect key="frame" x="36" y="107" width="342" height="33.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="28"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What does &quot;barbar&quot; in barbarians mean?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZ4-WP-Ua2">
+                                <rect key="frame" x="27" y="253.33333333333337" width="369" height="25"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK2-0E-bOG">
+                                <rect key="frame" x="186" y="772" width="42" height="36"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0Mx-AD-bHr" kind="show" id="DVn-7Q-L80"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chz-Do-gtQ">
+                                <rect key="frame" x="0.0" y="352" width="414" height="37"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <state key="normal" title="A. From the town of Barbar">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonA:" destination="koB-3S-RgN" eventType="touchUpInside" id="T6j-zz-DCL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRk-61-TwT">
+                                <rect key="frame" x="0.0" y="534" width="414" height="37"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <state key="normal" title="C. Hungry">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonC:" destination="koB-3S-RgN" eventType="touchUpInside" id="tCH-mU-mc9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t68-bh-gkN">
+                                <rect key="frame" x="0.0" y="439" width="414" height="37"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <state key="normal" title="B. Blah Blah">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonB:" destination="koB-3S-RgN" eventType="touchUpInside" id="Pej-lq-5ii"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4td-1g-mLc">
+                                <rect key="frame" x="0.0" y="683" width="414" height="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="t68-bh-gkN" firstAttribute="leading" secondItem="a5V-OF-Bwg" secondAttribute="leading" id="2Jb-r2-kaC"/>
+                            <constraint firstItem="Chz-Do-gtQ" firstAttribute="trailing" secondItem="a5V-OF-Bwg" secondAttribute="trailing" id="7D2-iU-NN4"/>
+                            <constraint firstItem="pih-dF-Iqk" firstAttribute="top" secondItem="a5V-OF-Bwg" secondAttribute="top" constant="107" id="8jS-wT-Gry"/>
+                            <constraint firstItem="zK2-0E-bOG" firstAttribute="top" secondItem="4td-1g-mLc" secondAttribute="bottom" constant="68" id="Av9-up-fzU"/>
+                            <constraint firstItem="Chz-Do-gtQ" firstAttribute="top" secondItem="qZ4-WP-Ua2" secondAttribute="bottom" constant="73.666666666666629" id="Igh-3e-Sfd"/>
+                            <constraint firstItem="a5V-OF-Bwg" firstAttribute="trailing" secondItem="zK2-0E-bOG" secondAttribute="trailing" constant="186" id="IsX-na-JTW"/>
+                            <constraint firstItem="4td-1g-mLc" firstAttribute="leading" secondItem="a5V-OF-Bwg" secondAttribute="leading" id="Kr6-N7-W8J"/>
+                            <constraint firstItem="t68-bh-gkN" firstAttribute="top" secondItem="Chz-Do-gtQ" secondAttribute="bottom" constant="50" id="NDt-mm-w7i"/>
+                            <constraint firstItem="HRk-61-TwT" firstAttribute="leading" secondItem="a5V-OF-Bwg" secondAttribute="leading" id="Npi-Hn-ZHn"/>
+                            <constraint firstItem="4td-1g-mLc" firstAttribute="trailing" secondItem="a5V-OF-Bwg" secondAttribute="trailing" id="SQb-O6-FUs"/>
+                            <constraint firstItem="t68-bh-gkN" firstAttribute="trailing" secondItem="a5V-OF-Bwg" secondAttribute="trailing" id="SYH-KP-z99"/>
+                            <constraint firstItem="HRk-61-TwT" firstAttribute="top" secondItem="t68-bh-gkN" secondAttribute="bottom" constant="58" id="UuF-WA-eg2"/>
+                            <constraint firstItem="qZ4-WP-Ua2" firstAttribute="leading" secondItem="a5V-OF-Bwg" secondAttribute="leading" constant="27" id="XVZ-pu-S7u"/>
+                            <constraint firstItem="qZ4-WP-Ua2" firstAttribute="top" secondItem="pih-dF-Iqk" secondAttribute="bottom" constant="113" id="ckF-87-7Pz"/>
+                            <constraint firstItem="4td-1g-mLc" firstAttribute="top" secondItem="HRk-61-TwT" secondAttribute="bottom" constant="112" id="fHy-zt-i7P"/>
+                            <constraint firstItem="a5V-OF-Bwg" firstAttribute="trailing" secondItem="qZ4-WP-Ua2" secondAttribute="trailing" constant="18" id="feR-ta-hVs"/>
+                            <constraint firstItem="t68-bh-gkN" firstAttribute="top" secondItem="Chz-Do-gtQ" secondAttribute="bottom" constant="50" id="hOq-MP-S8P"/>
+                            <constraint firstItem="zK2-0E-bOG" firstAttribute="top" secondItem="HRk-61-TwT" secondAttribute="bottom" constant="201" id="kyh-zU-voN"/>
+                            <constraint firstItem="HRk-61-TwT" firstAttribute="trailing" secondItem="a5V-OF-Bwg" secondAttribute="trailing" id="noL-Bd-svr"/>
+                            <constraint firstItem="HRk-61-TwT" firstAttribute="top" secondItem="t68-bh-gkN" secondAttribute="bottom" constant="58" id="q04-q8-yYh"/>
+                            <constraint firstItem="pih-dF-Iqk" firstAttribute="leading" secondItem="a5V-OF-Bwg" secondAttribute="leading" constant="36" id="qNq-o1-dLH"/>
+                            <constraint firstItem="zK2-0E-bOG" firstAttribute="bottom" secondItem="a5V-OF-Bwg" secondAttribute="bottom" id="r8Y-IL-qDy"/>
+                            <constraint firstItem="zK2-0E-bOG" firstAttribute="leading" secondItem="a5V-OF-Bwg" secondAttribute="leading" constant="186" id="uvy-tn-dhg"/>
+                            <constraint firstItem="Chz-Do-gtQ" firstAttribute="leading" secondItem="a5V-OF-Bwg" secondAttribute="leading" id="xs3-0m-VHl"/>
+                            <constraint firstItem="a5V-OF-Bwg" firstAttribute="trailing" secondItem="pih-dF-Iqk" secondAttribute="trailing" constant="36" id="zVO-13-AEg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a5V-OF-Bwg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jc1-ac-1qI"/>
+                    <connections>
+                        <outlet property="labelForText" destination="4td-1g-mLc" id="DUc-rw-Trv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drs-2J-1zZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="802.89855072463774" y="116.51785714285714"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="pLn-hp-MDF">
+            <objects>
+                <viewController id="0Mx-AD-bHr" customClass="thirdViewController" customModule="quizGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mM2-xm-D6y" customClass="GLKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trivia!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdn-wL-RpA">
+                                <rect key="frame" x="36" y="100" width="342" height="33.333333333333343"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="28"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do some people think cilantro tastes like?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgn-05-oNa">
+                                <rect key="frame" x="0.0" y="234.33333333333334" width="414" height="22.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game complete!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiF-ua-LM0">
+                                <rect key="frame" x="148" y="785" width="138" height="23"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="19"/>
+                                <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufL-MJ-Wf7">
+                                <rect key="frame" x="0.0" y="349" width="414" height="37"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <state key="normal" title="A. Dirt">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonA:" destination="0Mx-AD-bHr" eventType="touchUpInside" id="gSB-Ee-dFp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHQ-jk-zjq">
+                                <rect key="frame" x="0.0" y="531" width="414" height="37"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <state key="normal" title="C. Pepper">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonC:" destination="0Mx-AD-bHr" eventType="touchUpInside" id="IJE-B0-FGQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYm-DC-WMX">
+                                <rect key="frame" x="0.0" y="436" width="414" height="37"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="21"/>
+                                <state key="normal" title="B. Soap">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonB:" destination="0Mx-AD-bHr" eventType="touchUpInside" id="OsP-8D-3wy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lra-ss-xv3">
+                                <rect key="frame" x="8" y="675" width="406" height="31"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lra-ss-xv3" firstAttribute="top" secondItem="QHQ-jk-zjq" secondAttribute="bottom" constant="107" id="1xZ-QE-1Yi"/>
+                            <constraint firstItem="ufL-MJ-Wf7" firstAttribute="top" secondItem="pgn-05-oNa" secondAttribute="bottom" constant="92" id="2Nz-99-Exd"/>
+                            <constraint firstItem="EW0-vL-ppc" firstAttribute="trailing" secondItem="XiF-ua-LM0" secondAttribute="trailing" constant="128" id="4aN-8C-G7J"/>
+                            <constraint firstItem="VYm-DC-WMX" firstAttribute="top" secondItem="ufL-MJ-Wf7" secondAttribute="bottom" constant="50" id="5EG-2E-teP"/>
+                            <constraint firstItem="EW0-vL-ppc" firstAttribute="trailing" secondItem="gdn-wL-RpA" secondAttribute="trailing" constant="36" id="5f1-pH-gax"/>
+                            <constraint firstItem="pgn-05-oNa" firstAttribute="trailing" secondItem="EW0-vL-ppc" secondAttribute="trailing" id="9nz-b8-1PP"/>
+                            <constraint firstItem="VYm-DC-WMX" firstAttribute="leading" secondItem="EW0-vL-ppc" secondAttribute="leading" id="DRL-9t-xzY"/>
+                            <constraint firstItem="QHQ-jk-zjq" firstAttribute="leading" secondItem="EW0-vL-ppc" secondAttribute="leading" id="Dzp-TX-hNr"/>
+                            <constraint firstItem="ufL-MJ-Wf7" firstAttribute="leading" secondItem="EW0-vL-ppc" secondAttribute="leading" id="KyC-LW-jAZ"/>
+                            <constraint firstItem="lra-ss-xv3" firstAttribute="leading" secondItem="EW0-vL-ppc" secondAttribute="leading" constant="8" id="LvH-1Y-AKc"/>
+                            <constraint firstItem="QHQ-jk-zjq" firstAttribute="top" secondItem="VYm-DC-WMX" secondAttribute="bottom" constant="58" id="MMy-SR-UwM"/>
+                            <constraint firstItem="ufL-MJ-Wf7" firstAttribute="trailing" secondItem="EW0-vL-ppc" secondAttribute="trailing" id="Mmj-Bv-1GC"/>
+                            <constraint firstItem="pgn-05-oNa" firstAttribute="leading" secondItem="EW0-vL-ppc" secondAttribute="leading" id="Ndl-AE-KeQ"/>
+                            <constraint firstItem="VYm-DC-WMX" firstAttribute="trailing" secondItem="EW0-vL-ppc" secondAttribute="trailing" id="PsU-zW-tFk"/>
+                            <constraint firstItem="XiF-ua-LM0" firstAttribute="bottom" secondItem="EW0-vL-ppc" secondAttribute="bottom" id="VVU-mY-Qeo"/>
+                            <constraint firstItem="XiF-ua-LM0" firstAttribute="top" secondItem="lra-ss-xv3" secondAttribute="bottom" constant="89" id="Xns-vA-WnZ"/>
+                            <constraint firstItem="XiF-ua-LM0" firstAttribute="top" secondItem="QHQ-jk-zjq" secondAttribute="bottom" constant="217" id="aC8-am-WJZ"/>
+                            <constraint firstItem="QHQ-jk-zjq" firstAttribute="trailing" secondItem="EW0-vL-ppc" secondAttribute="trailing" id="aCw-kE-wv9"/>
+                            <constraint firstItem="lra-ss-xv3" firstAttribute="trailing" secondItem="EW0-vL-ppc" secondAttribute="trailing" id="cC2-2Z-UBN"/>
+                            <constraint firstItem="XiF-ua-LM0" firstAttribute="leading" secondItem="EW0-vL-ppc" secondAttribute="leading" constant="148" id="eLq-Os-NtP"/>
+                            <constraint firstItem="VYm-DC-WMX" firstAttribute="top" secondItem="ufL-MJ-Wf7" secondAttribute="bottom" constant="50" id="iMm-7c-2WQ"/>
+                            <constraint firstItem="QHQ-jk-zjq" firstAttribute="top" secondItem="VYm-DC-WMX" secondAttribute="bottom" constant="58" id="jZ6-9x-h6d"/>
+                            <constraint firstItem="gdn-wL-RpA" firstAttribute="leading" secondItem="EW0-vL-ppc" secondAttribute="leading" constant="36" id="ner-16-Xfc"/>
+                            <constraint firstItem="pgn-05-oNa" firstAttribute="top" secondItem="gdn-wL-RpA" secondAttribute="bottom" constant="101" id="qDP-Ra-GtR"/>
+                            <constraint firstItem="gdn-wL-RpA" firstAttribute="top" secondItem="EW0-vL-ppc" secondAttribute="top" constant="100" id="vsI-yP-qcO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EW0-vL-ppc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QGA-KK-lIX"/>
+                    <connections>
+                        <outlet property="labelForText" destination="lra-ss-xv3" id="zLp-Aq-xtp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxw-b7-gL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1478.2608695652175" y="117.85714285714285"/>
         </scene>
     </scenes>
 </document>

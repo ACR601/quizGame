@@ -15,6 +15,8 @@
 		6525FA9024B8D9F700B0A053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6525FA8E24B8D9F700B0A053 /* LaunchScreen.storyboard */; };
 		6525FA9B24B8D9F800B0A053 /* quizGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525FA9A24B8D9F800B0A053 /* quizGameTests.swift */; };
 		6525FAA624B8D9F800B0A053 /* quizGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525FAA524B8D9F800B0A053 /* quizGameUITests.swift */; };
+		6525FAB424B8DBA100B0A053 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525FAB324B8DBA100B0A053 /* secondViewController.swift */; };
+		6525FAB824B8DDE000B0A053 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525FAB724B8DDE000B0A053 /* thirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		6525FAA124B8D9F800B0A053 /* quizGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quizGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6525FAA524B8D9F800B0A053 /* quizGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quizGameUITests.swift; sourceTree = "<group>"; };
 		6525FAA724B8D9F800B0A053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6525FAB324B8DBA100B0A053 /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
+		6525FAB724B8DDE000B0A053 /* thirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				6525FA8524B8D9F500B0A053 /* SceneDelegate.swift */,
 				6525FA8724B8D9F500B0A053 /* ViewController.swift */,
 				6525FA8924B8D9F500B0A053 /* Main.storyboard */,
+				6525FAB324B8DBA100B0A053 /* secondViewController.swift */,
+				6525FAB724B8DDE000B0A053 /* thirdViewController.swift */,
 				6525FA8C24B8D9F700B0A053 /* Assets.xcassets */,
 				6525FA8E24B8D9F700B0A053 /* LaunchScreen.storyboard */,
 				6525FA9124B8D9F700B0A053 /* Info.plist */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6525FAB424B8DBA100B0A053 /* secondViewController.swift in Sources */,
 				6525FA8824B8D9F500B0A053 /* ViewController.swift in Sources */,
+				6525FAB824B8DDE000B0A053 /* thirdViewController.swift in Sources */,
 				6525FA8424B8D9F500B0A053 /* AppDelegate.swift in Sources */,
 				6525FA8624B8D9F500B0A053 /* SceneDelegate.swift in Sources */,
 			);

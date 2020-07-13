@@ -14,7 +14,24 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBOutlet weak var labelForWords: UILabel!
+    
+    
+    @IBAction func buttonA(_ sender: UIButton) {
+        labelForWords.text = "That is incorrect, sorry."
+    }
+    
+    
+    @IBAction func buttonB(_ sender: UIButton) {
+        labelForWords.text = "That is incorrect, sorry."
+    }
+    
+    
+    @IBAction func buttonC(_ sender: UIButton) {
+        labelForWords.text = "OMG! Smarty pants in the house!"
+    }
+    
+    
 }
 
